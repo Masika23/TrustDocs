@@ -1,0 +1,283 @@
+:root {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --primary: #00ff88;
+    --text: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background: #000;
+    border-bottom: 1px solid #333;
+}
+
+.navbar nav a {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+.navbar nav a:hover { color: var(--primary); }
+
+.auth-container { display: flex; justify-content: center; padding-top: 100px; }
+.auth-form { background: var(--card); padding: 40px; border-radius: 10px; width: 350px; }
+input { width: 100%; padding: 12px; margin: 10px 0 20px 0; border-radius: 5px; border: 1px solid #444; background: #000; color: white; box-sizing: border-box; }
+
+.btn-primary { background: var(--primary); color: black; border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+
+.dashboard-wrapper { display: flex; min-height: 90vh; }
+.dashboard-sidebar { width: 200px; padding: 20px; background: #1a1a1a; }
+.dashboard-sidebar ul { list-style: none; padding: 0; }
+.dashboard-sidebar ul li a { color: #aaa; text-decoration: none; display: block; margin: 15px 0; }
+
+.dashboard-main { flex: 1; padding: 40px; }
+.dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+
+.file-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+.file-card { background: var(--card); padding: 20px; border-radius: 8px; text-align: center; border: 1px solid #333; }
+.file-icon { font-size: 2rem; margin-bottom: 10px; }
+.file-name { font-weight: bold; font-size: 0.9rem; }
+.file-meta { font-size: 0.7rem; color: #888; }
+
+/* Hero Layout */
+.hero-section {
+    padding: 100px 10%;
+    text-align: center;
+    background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), 
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.hero-btns {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-secondary {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Features Styling */
+.features {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.features h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 136, 0.1);
+}
+
+.feature-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.footer {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 0.9rem;
+}
+/* Login Page Specifics */
+.auth-bg {
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    min-height: 100vh;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.login-container {
+    display: flex;
+    background: var(--card);
+    width: 900px;
+    max-width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid #334155;
+}
+
+/* Left side decoration */
+.login-info {
+    flex: 1;
+    background: linear-gradient(135deg, #10b981 0%, #064e3b 100%);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.security-badge {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 50px;
+    width: fit-content;
+    font-size: 0.8rem;
+}
+
+/* Right side form */
+.login-form-box {
+    flex: 1.2;
+    padding: 60px;
+    background: #1e293b;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+}
+
+.forgot-link {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.auth-footer a { color: var(--primary); text-decoration: none; }
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .login-container { flex-direction: column; }
+    .login-info { padding: 30px; }
+}
+/* Sidebar Upgraded */
+.dashboard-layout { display: flex; height: calc(100vh - 60px); }
+
+.sidebar-upgraded {
+    width: 260px;
+    background: #1a1a1a;
+    padding: 30px 15px;
+    border-right: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-title { font-size: 0.75rem; color: #666; letter-spacing: 1px; margin-bottom: 15px; }
+
+.side-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: 0.2s;
+}
+
+.side-btn:hover, .side-btn.active { background: #333; color: var(--primary); }
+
+/* Vault Main */
+.vault-main { flex: 1; background: #000; padding: 30px; overflow-y: auto; }
+
+.vault-header { display: flex; justify-content: space-between; margin-bottom: 30px; }
+
+.search-bar input {
+    width: 300px;
+    margin: 0;
+    background: #1a1a1a;
+    border: 1px solid #333;
+}
+
+/* Academic Papers - Scholarly Purple */
+.file-card[data-category="academic"] {
+    border-left: 4px solid #a855f7;
+}
+
+/* General Certificates - Classic Parchment Brown/Orange */
+.file-card[data-category="cert"] {
+    border-left: 4px solid #f97316;
+}
+
+/* Make sure the icons look sharp */
+.file-preview {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.file-card:hover .file-preview {
+    transform: scale(1.1); /* Slight pop effect on hover */
+}
+
+/* Storage Progress */
+.progress-bar { height: 6px; background: #333; border-radius: 10px; margin-top: 10px; }
+.progress { height: 100%; background: var(--primary); border-radius: 10px; }
+
+/* Strength Meter */
+.strength-meter { height: 4px; background: #333; margin-top: -15px; margin-bottom: 20px; transition: 0.3s; }

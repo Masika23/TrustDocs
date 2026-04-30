@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Vault | TrustDocs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-bg">
+    <header class="navbar">
+        <h2>TrustDocs</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="login-wrapper">
+        <div class="login-container">
+            <div class="login-info">
+                <h3>Start Your Secure Journey.</h3>
+                <p>Join thousands of users who trust us with their most sensitive legal documents.</p>
+                <ul class="trust-list">
+                    <li>✅ Zero-Knowledge Encryption</li>
+                    <li>✅ 24/7 Cloud Access</li>
+                    <li>✅ Secure File Sharing</li>
+                </ul>
+            </div>
+
+            <div class="login-form-box">
+                <form id="signupForm">
+                    <h2>Create Account</h2>
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="name@email.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Create Master Password</label>
+                        <input type="password" id="regPass" placeholder="Min. 8 characters" required>
+                        <div id="passStrength" class="strength-meter"></div>
+                    </div>
+                    <button type="submit" class="btn-primary full-width">Create My Vault</button>
+                    <p class="auth-footer">Already have a vault? <a href="login.html">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

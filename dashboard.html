@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Vault | TrustDocs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+    <header class="navbar">
+        <h2>TrustDocs</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" class="logout-link">Logout</a>
+        </nav>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar-upgraded">
+            <div class="sidebar-section">
+                <p class="section-title">CATEGORIES</p>
+                <button class="side-btn active" onclick="filterFiles('all')">📂 All Documents</button>
+                <button class="side-btn" onclick="filterFiles('id')">🆔 ID & Licenses</button>
+                <button class="side-btn" onclick="filterFiles('passport')">🛂 Passport</button>
+                <button class="side-btn" onclick="filterFiles('health_insurance')">🏥 Health Insurance</button>
+                <button class="side-btn" onclick="filterFiles('land')">🚜 Land Titles</button>
+                <button class="side-btn" onclick="filterFiles('cert')">📜 Certificates</button>
+                <button class="side-btn" onclick="filterFiles('academic')">🎓 Academic Papers</button>
+            </div>
+            <div class="storage-info">
+                <p>Storage: 45% used</p>
+                <div class="progress-bar"><div class="progress" style="width: 45%;"></div></div>
+            </div>
+        </aside>
+
+        <main class="vault-main">
+            <div class="vault-header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search your vault...">
+                </div>
+                <button class="btn-primary" onclick="document.getElementById('fileInput').click()">+ New Upload</button>
+                <input type="file" id="fileInput" hidden onchange="handleFile(this)">
+            </div>
+
+            <div class="file-grid" id="fileGrid">
+                <div class="file-card" data-category="id">
+                    <div class="file-preview">🆔</div>
+                    <div class="file-info">
+                        <h4>National_ID_Front.jpg</h4>
+                        <span>1.2 MB | Mar 13, 2026</span>
+                    </div>
+                    <button class="btn-more">⋮</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustDocs|Settings & Security</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+        <header class="navbar">
+        <h2>TrustDocs</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+    
+    <div class="settings-container">
+        <aside class="settings-nav">
+            <button class="side-btn active" onclick="showSection('profile')">👤 Profile</button>
+            <button class="side-btn" onclick="showSection('security')">🔒 Security</button>
+            <button class="side-btn" onclick="showSection('notifications')">🔔 Notifications</button>
+            <button class="side-btn" onclick="showSection('billing')">💳 Billing</button>
+            <button class="side-btn" onclick="showSection('integrations')">🔗 Integrations</button>
+        </aside>
+
+        <main class="settings-main">
+            <section id="profile" class="settings-section active">
+                <h3>Profile Settings</h3>
+                <form>
+                    <label for="profile-pic"></label>Profile Picture</label>
+                    <input type="file" id="profile-pic" accept="image/*">
+
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="John Doe">
+                    
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="john.doe@example.com">
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
